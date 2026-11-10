@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="hu" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>001 / Szigorúan személyes</title>
+  <meta name="description" content="Akta 001 — szigorúan személyes hozzáférés.">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#08090B">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%2308090B'/%3E%3Cpath fill='%23E50936' transform='translate(12 12) scale(.76)' d='M50 4 L60.78 37.16 L95.65 37.17 L67.44 57.67 L78.21 90.83 L50 70.34 L21.79 90.83 L32.56 57.67 L4.35 37.17 L39.22 37.16 Z'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Switch to the animated experience; fall back to the static file if script.js never arrives. */
+    document.documentElement.className = 'js';
+    setTimeout(function () { if (!window.RS_READY) document.documentElement.className = 'no-js'; }, 5000);
+  </script>
+</head>
+<body data-scene="intercept">
+
+  <!-- Shared SVG definitions -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="star" viewBox="0 0 100 100">
+        <path d="M50 4 L60.78 37.16 L95.65 37.17 L67.44 57.67 L78.21 90.83 L50 70.34 L21.79 90.83 L32.56 57.67 L4.35 37.17 L39.22 37.16 Z"/>
+      </symbol>
+      <linearGradient id="star-shade" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".12"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".14"/>
+      </linearGradient>
+      <!-- rubber-stamp ink: rough edges + uneven ink + tiny voids -->
+      <filter id="ink" x="-6%" y="-12%" width="112%" height="124%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="5" result="grain"/>
+        <feDisplacementMap in="SourceGraphic" in2="grain" scale="2.6" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.035 0.08" numOctaves="3" seed="11" result="blot"/>
+        <feColorMatrix in="blot" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -2.4 0 0 0 2.05" result="blotMask"/>
+        <feComposite in="rough" in2="blotMask" operator="in" result="inked"/>
+        <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="1" seed="2" result="speck"/>
+        <feColorMatrix in="speck" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -9 0 0 0 6.7" result="speckMask"/>
+        <feComposite in="inked" in2="speckMask" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Analog atmosphere -->
+  <div class="fx" aria-hidden="true">
+    <div class="fx__grain"></div>
+    <div class="fx__lines"></div>
+    <div class="fx__vignette"></div>
+    <div class="fx__interference"></div>
+    <div class="fx__flash"></div>
+  </div>
+
+  <header class="hud">
+    <p class="hud__id"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#star" width="100" height="100"/></svg><span>VÖRÖS CSILLAG<span class="hud__proj"> PROJEKT</span> <b>/ <span data-bind="fileNumber">001</span></b></span></p>
+    <p class="hud__status" id="hud-status"><span class="hud__dot" aria-hidden="true"></span><span id="hud-status-text">TITKOSÍTOTT</span></p>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- ============ SCENE 01 — INTERCEPTED TRANSMISSION ============ -->
+    <section class="scene scene--intercept is-active" data-scene="intercept" aria-labelledby="intercept-title">
+      <h2 class="sr-only" id="intercept-title">Elfogott titkosított adás</h2>
+      <div class="intercept">
+        <p class="signal"><span class="signal__dot" aria-hidden="true"></span><span>CSATORNA 001 · TITKOSÍTOTT VONAL</span></p>
+        <div class="terminal">
+          <p class="t-line"><span class="t-prompt" aria-hidden="true">&gt;</span><span class="t-text">TITKOSÍTOTT ADÁS ÉSZLELVE</span></p>
+          <p class="t-line"><span class="t-prompt" aria-hidden="true">&gt;</span><span class="t-text">CÍMZETT: <span data-bind="recipientUpper">SZAKÁCS-PAÁL ERZSÉBET</span></span></p>
+          <p class="t-line"><span class="t-prompt" aria-hidden="true">&gt;</span><span class="t-text">SZEMÉLYAZONOSSÁG MEGERŐSÍTVE</span><span class="t-ok" aria-hidden="true">✓</span></p>
+        </div>
+        <svg class="scope" viewBox="0 0 300 40" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="20" x2="300" y2="20"/>
+          <polyline points="0,20 300,20"/>
+        </svg>
+      </div>
+      <p class="intercept__foot" aria-hidden="true">
+        <span class="rec">ÉLŐ <time data-clock>0000.00.00 00:00:00</time></span>
+        <span class="coords" data-bind="coordinates">45°52′ É · 25°47′ K</span>
+      </p>
+      <button class="skip-link" type="button" hidden>KÖZVETLENÜL AZ AKTÁHOZ →</button>
+    </section>
+
+    <!-- ============ SCENE 01b — THE FILE ARRIVES ============ -->
+    <section class="scene scene--arrival" data-scene="arrival" aria-labelledby="arrival-title">
+      <div class="arrival">
+
+        <div class="folder" id="folder" aria-hidden="true">
+          <div class="folder__back">
+            <span class="folder__tab" data-bind="fileNumber">001</span>
+            <div class="folder__pocket" id="pocket"></div>
+          </div>
+          <div class="folder__cover">
+            <div class="folder__face folder__face--front">
+              <div class="cover-stamp">
+                <svg viewBox="0 0 300 64">
+                  <g filter="url(#ink)">
+                    <rect x="3" y="3" width="294" height="58" rx="3" fill="none" stroke="currentColor" stroke-width="4"/>
+                    <text x="150" y="43" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="31" fill="currentColor" textLength="258" lengthAdjust="spacingAndGlyphs">SZIGORÚAN TITKOS</text>
+                  </g>
+                </svg>
+              </div>
+              <div class="cover-star">
+                <svg viewBox="0 0 100 100">
+                  <use href="#star" width="100" height="100" transform="translate(-1.4 -1.4)" fill="rgba(255,255,255,.3)"/>
+                  <use href="#star" width="100" height="100" transform="translate(1.6 1.9)" fill="rgba(0,0,0,.4)"/>
+                  <use href="#star" width="100" height="100" fill="#E50936"/>
+                  <use href="#star" width="100" height="100" fill="url(#star-shade)"/>
+                </svg>
+              </div>
+              <div class="cover-label">
+                <p><span>AKTA SZ. <span data-bind="fileNumber">001</span></span><span>VCS</span></p>
+                <p><span>CÍMZETT: <span data-bind="recipientInitials">SZ.-P. E.</span></span></p>
+                <p><span>TÁRGY:</span><span class="bar"></span></p>
+              </div>
+              <div class="cover-string">
+                <svg viewBox="0 0 40 100">
+                  <g class="disc">
+                    <circle cx="20" cy="40" r="7.5" fill="#8C0522"/>
+                    <circle cx="20" cy="40" r="7.5" fill="none" stroke="rgba(255,255,255,.28)" stroke-width=".8"/>
+                    <circle cx="17.5" cy="38" r="1.1" fill="rgba(0,0,0,.45)"/>
+                    <circle cx="22.5" cy="42" r="1.1" fill="rgba(0,0,0,.45)"/>
+                  </g>
+                  <path class="string" d="M34 100 C 30 92, 36 82, 28 72 C 22 64, 30 56, 26 48 C 23 41, 10 44, 12 36 C 14 28, 30 30, 28 40 C 26 50, 10 48, 13 39 C 15 33, 24 33, 26 38"/>
+                </svg>
+              </div>
+            </div>
+            <div class="folder__face folder__face--inside"></div>
+          </div>
+        </div>
+
+        <div class="arrival__text">
+          <h1 class="arrival__title" id="arrival-title" data-reveal>EGY TITKOS AKTA ÉRKEZETT.</h1>
+          <p class="arrival__meta" data-reveal>AKTA <span data-bind="fileNumber">001</span> / SZIGORÚAN SZEMÉLYES HOZZÁFÉRÉS</p>
+          <div class="arrival__cta" data-reveal>
+            <button class="btn" id="btn-open" type="button" disabled>AKTA MEGNYITÁSA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCENE 02–04 — THE DOSSIER, DECLASSIFICATION, BRIEFING ============ -->
+    <section class="scene scene--file" data-scene="file" aria-label="Az akta">
+      <div class="stack" id="stack">
+
+        <!-- SCENE 02 / 03 — CLASSIFIED DOSSIER -->
+        <article class="sheet dossier" id="dossier" aria-labelledby="dossier-title">
+          <div class="sheet__ring" aria-hidden="true"></div>
+          <p class="sheet__micro" aria-hidden="true">NE MÁSOLJA · NE TOVÁBBÍTSA · CSAK SZEMÉLYES HASZNÁLATRA · ARCHÍVUM 1945—1989</p>
+
+          <header class="dossier__head">
+            <p><b>ARCHÍVUM / <span data-bind="fileNumber">001</span></b><br>FŐNYILVÁNTARTÁS</p>
+            <p class="dossier__ref">IKT. SZ. <span data-bind="ticketSerial">VCS-001</span>/26<br>LAP 1/2</p>
+          </header>
+
+          <h2 class="dossier__title" id="dossier-title"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#star" width="100" height="100"/></svg><span>SZIGORÚAN TITKOS</span></h2>
+          <div class="rule-double" aria-hidden="true"></div>
+
+          <dl class="fields">
+            <div class="field field--wide">
+              <dt>NÉV</dt>
+              <dd data-bind="recipientUpper">SZAKÁCS-PAÁL ERZSÉBET</dd>
+              <span class="hand hand--name" aria-hidden="true">
+                <svg viewBox="0 0 30 26"><path d="M28 3 C 18 4, 8 9, 4 21 M4 21 L 2.5 14 M4 21 L 10 17.5"/></svg>
+                <span>megtaláltuk!</span>
+              </span>
+            </div>
+            <div class="field">
+              <dt>STÁTUSZ</dt>
+              <dd>AZONOSÍTVA</dd>
+            </div>
+            <div class="field">
+              <dt>HOZZÁFÉRÉS</dt>
+              <dd><span class="strike" id="access-value">KORLÁTOZOTT</span><span class="hand hand--below" id="access-note" aria-hidden="true">→ engedélyezve</span></dd>
+            </div>
+            <div class="field">
+              <dt>MEGBÍZÓ</dt>
+              <dd><span class="redact redact--permanent" aria-hidden="true">XXXXXXXXXX</span><span class="sr-only">titkosítva</span><span class="hand hand--below" id="secret-note" aria-hidden="true">titok marad.</span></dd>
+            </div>
+            <div class="field">
+              <dt>KÜLDETÉS</dt>
+              <dd><span class="redact" data-secret data-bind="missionUpper">VÖRÖS CSILLAG</span></dd>
+            </div>
+            <div class="field field--wide">
+              <dt>KAPCSOLATFELVÉTEL · IDŐPONT-EGYEZTETÉS</dt>
+              <dd><span class="redact" data-secret data-bind="contactPhone">+40 726 709 755</span></dd>
+            </div>
+          </dl>
+
+          <div class="memo">
+            <p class="memo__label">MEGJEGYZÉS</p>
+            <p class="memo__text">Az alany <span class="redact" data-secret data-bind="guests">2</span> fő részére belépési jogosultságot kap. Objektum: <span class="redact" data-secret data-bind="museumUpper">VÖRÖS CSILLAG MÚZEUM</span>. Helyszín: <span class="redact" data-secret data-bind="cityUpper">SEPSISZENTGYÖRGY</span>.</p>
+          </div>
+
+          <footer class="dossier__foot">
+            <span>MEGNYITVA: <time data-now>—</time></span>
+            <span>PÉLDÁNY: 1/1</span>
+          </footer>
+
+          <div class="stamp stamp--classified" aria-hidden="true">
+            <svg viewBox="0 0 320 116">
+              <g filter="url(#ink)">
+                <rect x="5" y="5" width="310" height="106" rx="7" fill="none" stroke="currentColor" stroke-width="6"/>
+                <rect x="15" y="15" width="290" height="86" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <text x="160" y="70" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="45" fill="currentColor" textLength="262" lengthAdjust="spacingAndGlyphs">TITKOSÍTVA</text>
+                <text x="160" y="91" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-weight="500" font-size="11" letter-spacing="3.2" fill="currentColor">SZIGORÚAN TITKOS · AKTA 001</text>
+              </g>
+            </svg>
+          </div>
+          <div class="stamp stamp--declassified" aria-hidden="true">
+            <svg viewBox="0 0 340 150">
+              <g filter="url(#ink)">
+                <rect x="5" y="5" width="330" height="140" rx="10" fill="none" stroke="currentColor" stroke-width="6"/>
+                <text x="170" y="68" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="58" fill="currentColor" textLength="284" lengthAdjust="spacingAndGlyphs">FELOLDVA</text>
+                <line x1="26" y1="84" x2="314" y2="84" stroke="currentColor" stroke-width="2.4"/>
+                <text x="170" y="111" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="19" fill="currentColor" textLength="272" lengthAdjust="spacingAndGlyphs">HOZZÁFÉRÉS ENGEDÉLYEZVE</text>
+                <text x="170" y="134" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-weight="500" font-size="10.5" letter-spacing="3" fill="currentColor"><tspan data-today>2026.11.10</tspan> · <tspan data-bind="ticketSerial">VCS-001</tspan></text>
+              </g>
+            </svg>
+          </div>
+          <div class="scanbeam" aria-hidden="true"></div>
+        </article>
+
+        <!-- SCENE 04 — MISSION BRIEFING -->
+        <article class="sheet briefing" id="briefing" aria-labelledby="briefing-title">
+          <div class="briefing__band" aria-hidden="true">
+            <span><svg viewBox="0 0 100 100"><use href="#star" width="100" height="100"/></svg>KÜLDETÉSI ELIGAZÍTÁS</span>
+            <i>LAP 2/2</i>
+          </div>
+
+          <div class="briefing__body">
+            <div class="briefing__wm" aria-hidden="true">
+              <svg viewBox="-4 -2 108 108" fill="none" stroke="currentColor" stroke-width=".35">
+                <circle cx="50" cy="52" r="48"/>
+                <circle cx="50" cy="52" r="18.3" stroke-dasharray="1 1.4"/>
+                <path d="M50 4 L78.21 90.83 L4.35 37.17 L95.65 37.17 L21.79 90.83 Z"/>
+                <path d="M50 -2 V106 M-4 37.17 H104" stroke-dasharray=".8 1.6"/>
+                <path d="M46.91 13.51 A10 10 0 0 0 53.09 13.51"/>
+                <path d="M48.4 52 H51.6 M50 50.4 V53.6"/>
+                <text x="50" y="19.6" font-size="3.1" text-anchor="middle" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', monospace">36°</text>
+                <text x="63" y="34.6" font-size="3.1" fill="currentColor" stroke="none" font-family="'IBM Plex Mono', monospace">72°</text>
+              </svg>
+            </div>
+
+            <p class="briefing__kicker" data-in style="--d:0">ARCHÍVUM / <span data-bind="fileNumber">001</span> — FELOLDVA</p>
+
+            <h2 class="briefing__title" id="briefing-title" data-in style="--d:120">
+              <span class="briefing__title-pre">KÜLDETÉS:</span>
+              <span class="briefing__title-main" id="mission-title"><span>VÖRÖS</span> <span>CSILLAG</span></span>
+            </h2>
+
+            <p class="briefing__sub" data-in style="--d:320">A múlt titkai most előtted nyílnak meg.</p>
+
+            <dl class="spec">
+              <div data-in style="--d:520"><dt>KÜLDETÉS AZONOSÍTÓ</dt><dd data-bind="missionId">VÖRÖS-CSILLAG-001</dd></div>
+              <div data-in style="--d:620"><dt>KIVÁLASZTOTT SZEMÉLY</dt><dd data-bind="recipientUpper">SZAKÁCS-PAÁL ERZSÉBET</dd></div>
+              <div data-in style="--d:720"><dt>HELYSZÍN</dt><dd data-bind="museumUpper">VÖRÖS CSILLAG MÚZEUM</dd></div>
+              <div data-in style="--d:820"><dt>VÁROS</dt><dd data-bind="cityUpper">SEPSISZENTGYÖRGY</dd></div>
+              <div data-in style="--d:920"><dt>BELÉPÉSI JOGOSULTSÁG</dt><dd data-bind="guestsLabel">2 FŐ</dd></div>
+              <div data-in style="--d:1020"><dt>KAPCSOLATFELVÉTEL · IDŐPONT-EGYEZTETÉS</dt><dd><a class="tel" data-tel href="tel:+40726709755"><span data-bind="contactPhone">+40 726 709 755</span><span class="tel__cta" aria-hidden="true">HÍVÁS →</span></a></dd></div>
+              <div data-in style="--d:1120"><dt>KÜLDETÉS ÁLLAPOTA</dt><dd><span class="live" aria-hidden="true"></span>AKTIVÁLVA</dd></div>
+            </dl>
+
+            <figure class="note" id="note" data-in style="--d:1250">
+              <div class="note__clip" aria-hidden="true">
+                <svg viewBox="0 0 22 64"><path d="M15 20 V50 a4 4 0 0 1 -8 0 V9 a6 6 0 0 1 12 0 V54 a8 8 0 0 1 -16 0 V14"/></svg>
+              </div>
+              <span class="note__mark" aria-hidden="true">SZEMÉLYES</span>
+              <blockquote class="note__text" id="note-text">
+                <p>Kedves Erzsébet!</p>
+                <p>Egy különleges utazás vár rád. Nem a jövőbe, hanem egy olyan múltba, amely még ma is rengeteg titkot őriz.</p>
+                <p>Két belépő. Egy különleges helyszín. És egy történet, amelyet most te fedezhetsz fel.</p>
+                <p>A küldetésed hivatalosan is kezdetét vette.</p>
+              </blockquote>
+            </figure>
+
+            <p class="briefing__close" id="briefing-close"><span>AZ AKTA LEZÁRVA.</span><span>A KALAND MOST KEZDŐDIK.</span></p>
+
+            <div class="briefing__cta">
+              <button class="btn btn--solid" id="btn-ticket" type="button" aria-haspopup="dialog">BELÉPŐ MEGTEKINTÉSE</button>
+            </div>
+          </div>
+
+          <footer class="briefing__foot" aria-hidden="true">
+            <span data-bind="missionId">VÖRÖS-CSILLAG-001</span>
+            <span class="coords" data-bind="coordinates">45°52′ É · 25°47′ K</span>
+          </footer>
+        </article>
+      </div>
+
+      <div class="file-actions" id="file-actions">
+        <p class="file-actions__hint">„Az aktához való hozzáférés feloldható.”</p>
+        <button class="btn" id="btn-declassify" type="button" disabled>TITKOSÍTÁS FELOLDÁSA</button>
+      </div>
+
+      <div class="replay" id="replay">
+        <button type="button" id="btn-replay">↺ ÚJRAJÁTSZÁS</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- clearance sequence HUD (decorative; the result is announced separately) -->
+  <div class="clearance" id="clearance" aria-hidden="true">
+    <div class="clearance__inner">
+      <p class="clearance__head"><span>VISSZAFEJTÉS / AKTA <span data-bind="fileNumber">001</span></span><span class="clearance__pct" id="clearance-pct">0%</span></p>
+      <div class="clearance__bar"><i id="clearance-bar"></i></div>
+      <p class="clearance__row"><span>SZEMÉLYAZONOSSÁG ELLENŐRIZVE</span><b>···</b></p>
+      <p class="clearance__row"><span>BIZTONSÁGI ENGEDÉLY MEGADVA</span><b>···</b></p>
+      <p class="clearance__row"><span>AKTA VISSZAFEJTVE</span><b>···</b></p>
+    </div>
+  </div>
+
+  <!-- ============ THE TICKET ============ -->
+  <div class="ticket-layer" id="ticket-layer" hidden>
+    <div class="ticket-layer__backdrop" data-close></div>
+    <button class="ticket-close" type="button" data-close>BEZÁRÁS <span aria-hidden="true">×</span></button>
+    <div class="ticket-wrap" role="dialog" aria-modal="true" aria-labelledby="ticket-title">
+      <div class="ticket" id="ticket">
+        <div class="ticket__top">
+          <p class="ticket__eyebrow">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="10" width="17" height="10.5"/><rect x="2.5" y="6.5" width="19" height="3.5"/><path d="M12 6.5V20.5"/><path d="M12 6.5C10.5 3.5 6.5 3 6.5 5.2c0 1.6 2.5 1.3 5.5 1.3zM12 6.5c1.5-3 5.5-3.5 5.5-1.3 0 1.6-2.5 1.3-5.5 1.3z"/></svg>
+            AJÁNDÉK BELÉPŐ
+          </p>
+          <div class="ticket__star" id="ticket-star" aria-hidden="true">
+            <svg viewBox="-2 0 104 104">
+              <circle cx="50" cy="52" r="50" fill="none" stroke="rgba(8,9,11,.35)" stroke-width=".7" stroke-dasharray="1.2 2.2"/>
+              <use href="#star" width="100" height="100" transform="translate(-1.3 -1.3)" fill="rgba(255,255,255,.32)"/>
+              <use href="#star" width="100" height="100" transform="translate(1.5 1.8)" fill="rgba(0,0,0,.42)"/>
+              <use href="#star" width="100" height="100" fill="#E50936"/>
+              <use href="#star" width="100" height="100" fill="url(#star-shade)"/>
+            </svg>
+          </div>
+          <h2 class="ticket__venue" id="ticket-title"><span data-bind="museumLine1">VÖRÖS CSILLAG</span> <span data-bind="museumLine2">MÚZEUM</span></h2>
+          <p class="ticket__city" data-bind="cityUpper">SEPSISZENTGYÖRGY</p>
+        </div>
+        <div class="ticket__bottom">
+          <dl class="ticket__grid">
+            <div class="span2"><dt>VENDÉG</dt><dd class="ticket__guest" data-bind="recipientName">Szakács-Paál Erzsébet</dd></div>
+            <div><dt>BELÉPŐ</dt><dd class="ticket__big" data-bind="guestsLabel">2 FŐ</dd></div>
+            <div><dt>SOROZATSZÁM</dt><dd class="ticket__serial" data-bind="ticketSerial">VCS-001</dd></div>
+            <div class="span2"><dt>IDŐPONT-EGYEZTETÉS</dt><dd><a class="ticket__tel" data-tel href="tel:+40726709755" data-bind="contactPhone">+40 726 709 755</a></dd></div>
+          </dl>
+          <div class="ticket__code" aria-hidden="true">
+            <svg id="ticket-code" viewBox="0 0 240 40" preserveAspectRatio="none"></svg>
+            <span data-bind="ticketSerial">VCS-001</span>
+          </div>
+          <p class="ticket__fine">Az ajándék jelképes ábrázolása — nem hivatalos belépőjegy. A látogatás időpontját a fenti számon lehet egyeztetni.</p>
+        </div>
+      </div>
+      <p class="ticket-caption" aria-hidden="true">AKTA 001 · LEZÁRVA · <span data-today>2026.11.10</span></p>
+    </div>
+  </div>
+
+  <div class="sr-only" id="announcer" aria-live="polite" aria-atomic="false"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
